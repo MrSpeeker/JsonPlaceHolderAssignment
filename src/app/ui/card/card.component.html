@@ -1,0 +1,16 @@
+<mat-card class="card" (click)="itemClicked()">
+    <mat-card-content>
+        <p *ngIf="json.itemType == 0">
+            {{json.title}}
+        </p>
+        <p *ngIf="json.itemType == 1">
+            {{json.id}}
+        </p>
+        <p *ngIf="json.itemType == 2">
+            {{json.userId}}
+        </p>
+        <p *ngIf="json.itemType == 3">
+            {{json.body}}
+        </p>
+    </mat-card-content>
+</mat-card>

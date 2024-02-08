@@ -1,10 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { JsonPlaceHolderComponent } from './features/json-place-holder/json-place-holder.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'zivver-root',
+  standalone: true,
+  imports: [CommonModule, JsonPlaceHolderComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ZivverVincent';
+  title = 'Zivver Vincent';
 }
