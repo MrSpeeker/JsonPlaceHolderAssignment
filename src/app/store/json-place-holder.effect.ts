@@ -5,6 +5,7 @@ import { catchError, exhaustMap, map, mergeMap, of } from 'rxjs';
 import { IJsonPlaceHolder } from '../models/json-place-holder.interface';
 import { JsonPlaceHolderService } from '../services/json-place-holder.service';
 import * as JsonActions from './json-place-holder.action';
+import { jsonPlaceHolderEnum } from '../models/json-place-holder.type';
 
 @Injectable()
 export class JsonPlaceHolderEffects {
@@ -17,7 +18,7 @@ export class JsonPlaceHolderEffects {
           .pipe(
             map((jsonItems: IJsonPlaceHolder[]) =>
               {
-                const jsonItemsWithSelection: IJsonPlaceHolder[] = jsonItems.map(item => ({ ...item, isSelected: false })) ;
+                const jsonItemsWithSelection: IJsonPlaceHolder[] = jsonItems.map(item => ({ ...item, itemType: jsonPlaceHolderEnum.Title })) ;
                 return JsonActions.loadJsonPlaceHoldersSuccess({ jsonItemsWithSelection })
               }
             )

@@ -1,9 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
 
 import { IJsonPlaceHolder } from '../models/json-place-holder.interface';
-import * as JsonActions from './json-place-holder.action';
 import { jsonPlaceHolderEnum } from '../models/json-place-holder.type';
-import { R3SelectorScopeMode } from '@angular/compiler';
+import * as JsonActions from './json-place-holder.action';
 
 // Define the interface for your state
 export interface JsonPlaceHoldersState {
@@ -41,28 +40,12 @@ export const jsonPlaceHolderReducer = createReducer(
 
     })),
   })),
-  on(JsonActions.previousSelectedJsonItem, (state, { previousId }) => ({
-    ...state,
-    json: state.json.map((json) => ({
-      ...json,
-      itemType:
-        json.id === previousId ? getNextEnum(json.itemType) : jsonPlaceHolderEnum.Title,
-        displayValue: setNextValue()
-    })),
-  }))
 );
-
-// Send trough current selected and previous selected
-// with this so you dont have to reset all items but instead only reset previous
-
-const setNextValue = (itemType: jsonPlaceHolderEnum, json: IJsonPlaceHolder) => {
-
-}
 
 const getNextEnum = (itemType: jsonPlaceHolderEnum) => {
   if (itemType == jsonPlaceHolderEnum.Body) {
-    itemType = jsonPlaceHolderEnum.Title;
+    return jsonPlaceHolderEnum.Title;
   } else {
-    itemType++;
+    return ++itemType;
   }
 };
