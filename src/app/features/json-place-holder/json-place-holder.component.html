@@ -1,9 +1,9 @@
-<zivver-current-item [currentId]="currentId"></zivver-current-item>
+<project-current-item [currentId]="currentId"></project-current-item>
 <mat-card style="height: 91vh; overflow-y: auto;">
     <mat-card-content>
         <mat-grid-list cols="10">
             <mat-grid-tile *ngFor="let json of jsonItems">
-                <zivver-card [json]="json" (itemChangeEvent)="getCurrentItemId($event)"></zivver-card>
+                <project-card [json]="json" (itemChangeEvent)="getCurrentItemId($event)"></project-card>
             </mat-grid-tile>
         </mat-grid-list>
     </mat-card-content>

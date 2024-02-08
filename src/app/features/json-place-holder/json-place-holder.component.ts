@@ -11,7 +11,7 @@ import { CardComponent } from '../../ui/card/card.component';
 import { CurrentItemComponent } from '../../ui/current-item/current-item.component';
 
 @Component({
-  selector: 'zivver-json-place-holder',
+  selector: 'project-json-place-holder',
   standalone: true,
   imports: [
     CommonModule,

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'zivver-current-item',
+  selector: 'project-current-item',
   standalone: true,
   imports: [CommonModule, MatToolbarModule],
   templateUrl: './current-item.component.html',

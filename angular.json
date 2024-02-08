@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ZivverVincent": {
+    "JsonPlaceAssignment": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/zivver-vincent",
+            "outputPath": "dist/json-place-assignment",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ZivverVincent:build:production"
+              "browserTarget": "JsonPlaceAssignment:build:production"
             },
             "development": {
-              "browserTarget": "ZivverVincent:build:development"
+              "browserTarget": "JsonPlaceAssignment:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ZivverVincent:build"
+            "browserTarget": "JsonPlaceAssignment:build"
           }
         },
         "test": {

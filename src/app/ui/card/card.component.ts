@@ -8,7 +8,7 @@ import { jsonPlaceHolderEnum } from '../../models/json-place-holder.type';
 import * as JsonActions from '../../store/json-place-holder.action';
 
 @Component({
-  selector: 'zivver-card',
+  selector: 'project-card',
   standalone: true,
   imports: [CommonModule, MatCardModule],
   templateUrl: './card.component.html',
