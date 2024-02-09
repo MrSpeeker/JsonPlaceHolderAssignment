@@ -75,19 +75,20 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
    **Example**:
       - number
       - **Why** A variable has its own location id. So in the following code:
+      ```
          a = 5; 
          b = a + 3;
          // `a` will still = 5
          // `b` will = 8
 
-         if number were mutable, a will change to 8 and b as well because then they would share the same location id.
-   
+         // if number were mutable, a will change to 8 and b as well because then they would share the same location id.
+      ```
    **Prod and Cons**
-      **Pros:**
+      - **Pros:**
          - Can implement change detection optimizations. Angular does reference checks instead of deep object comparisons.
          - Performance increase. With limiting the change detection can in turn improve performance, because we can choose when to push a change.
          - Debugging is made a lot easier because an object change is more predictable than with mutable types.
-      **Cons:**
+      - **Cons:**
          - Coding overhead. 
          - Learning curve. New patterns and best practices will have to be learned to implement it properly and when needed.
          - Nested data structures can become a pain to handle when immutable.
