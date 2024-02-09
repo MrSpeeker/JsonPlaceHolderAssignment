@@ -58,3 +58,15 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
 5. What part of a new job do you think is more important:
    - Choose your own hardware, but work with a company supplied operating system image.
    - You’re offered a standard piece of mediocre hardware. Free to pick your own Software.
+
+## Assignment answers
+
+1.
+
+2. 
+
+3.
+
+4.
+
+5. 
