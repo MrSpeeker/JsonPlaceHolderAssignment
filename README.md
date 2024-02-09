@@ -61,12 +61,58 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
 
 ## Assignment answers
 
-1.
+1. Looking at the token it seems that you are using a HMACSHA256 cryptographic algorithm, this is safe because:
+   - HMAC is used for message authentication.
+   - HMAC is efficient and suitable for use cases where both parties share a secret key. (In your case you have both parties with the autentication extention, so if they are marked as trusted they most probably share the same secret key).
+   - Most commonly used for securing communications protocols like TLS/SSL. 
+   - Also used for generating authentication tokens and verifying api requests.
 
-2. 
+2. Attack vectors available:
+   - **Phishing**: For html attachments links can be hidden in the html, and when clicking on any element that the user won't notice, it can redirect them to a Phishing website. This in turn can download malware or retrieve user credentials.
+   - **
 
-3.
+3. A mutable object can be changed after it is created, while an immutable object cannot.
+   **Example**:
+      - number
+      - **Why** A variable has its own location id. So in the following code:
+         a = 5; 
+         b = a + 3;
+         // `a` will still = 5
+         // `b` will = 8
 
-4.
+         if number were mutable, a will change to 8 and b as well because then they would share the same location id.
+   
+   **Prod and Cons**
+      **Pros:**
+         - Can implement change detection optimizations. Angular does reference checks instead of deep object comparisons.
+         - Performance increase. With limiting the change detection can in turn improve performance, because we can choose when to push a change.
+         - Debugging is made a lot easier because an object change is more predictable than with mutable types.
+      **Cons:**
+         - Coding overhead. 
+         - Learning curve. New patterns and best practices will have to be learned to implement it properly and when needed.
+         - Nested data structures can become a pain to handle when immutable.
+         
+   **Achieving immutability in my own app:**
+    
+   
+   **Pros and Cons of immutability:**
+      - **Pros of immutability:**
+         - 
+      - **Cons of immutability:**
+         - **Object creation overhead:** When creating a new object everytime instead of modifying exisiting ones can introduce overhead. 
+         - **Memory usage:**
+   - 
+
+4. Steps to how I would improve performance on a web-app:
+   **Example of performance issue:**
+      - Change detection on entering details in a input box.
+   - **Way of find performance issue:**
+      - Angular chrome extention, profiler.
+      - 
+
+   - **Find the problem**
+      - Most perfornance issues can be picked up using the Angular Chrome extention, the profiler.
+      - Can execute actions on you web-app and see what might be the cause of said performance issues.
+   
 
 5. 
