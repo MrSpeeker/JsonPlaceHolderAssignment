@@ -1,27 +1,37 @@
 # JsonPlaceAssignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+## Description:
+
+1. In this assignment we pull data from the following post request -> https://jsonplaceholder.typicode.com/posts
+2. A 10 x 10 grid is built to show all these json items as separate components.
+3. Displayed on the squares:
+- Default `Title`
+- Click -> `UserId`
+- Click -> `Id`
+- Click -> `Body`
+- Click -> `Title`
+
+4. When clicking on item 1 and then on item 2, item 1 should be reset to a default value of `Title` and item 2 should be set to `Body`:
+- NGRX state management has been implemented to change the type of an item when it is clicked on based on the following enum: 
+- `export enum jsonPlaceHolderEnum {
+    Title = 0,
+    UserId = 1,
+    Id = 2,
+    Body = 3,
+   }`
+ - Based on the type set in the store, a value will display according to match its type on the card.
+
+5. The current clicked item's `id` is displayed on a toolbar at the top of the page.
+
+## Setup
+1. Clone repository.
+2. Inside the root folder of the cloned repository, type in a terminal `npm i`.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
