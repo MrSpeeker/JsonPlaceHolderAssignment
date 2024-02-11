@@ -1,4 +1,4 @@
-import { jsonPlaceHolderEnum } from "./json-place-holder.type";
+import { jsonPlaceHolderEnum } from './json-place-holder.type';
 
 export class IJsonPlaceHolder {
   userId = 0;

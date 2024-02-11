@@ -4,19 +4,16 @@ import { IJsonPlaceHolder } from '../models/json-place-holder.interface';
 import { jsonPlaceHolderEnum } from '../models/json-place-holder.type';
 import * as JsonActions from './json-place-holder.action';
 
-// Define the interface for your state
 export interface JsonPlaceHoldersState {
   json: IJsonPlaceHolder[];
   error: any;
 }
 
-// Define the initial state
 export const initialState: JsonPlaceHoldersState = {
   json: [],
   error: null,
 };
 
-// Create the reducer
 export const jsonPlaceHolderReducer = createReducer(
   initialState,
   on(JsonActions.loadJsonPlaceHolders, (state) => ({ ...state })),

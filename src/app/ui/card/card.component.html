@@ -1,7 +1,4 @@
-<mat-card
-  [ngClass]="changeColor ? 'select-item' : ''"
-  (click)="itemClicked()"
->
+<mat-card [ngClass]="changeColor ? 'select-item' : ''" (click)="itemClicked()">
   <mat-card-content (mouseenter)="showText()" (mouseleave)="hideText()">
     <mat-icon *ngIf="!isHovered"> chrome_reader_mode </mat-icon>
     <p class="prevent-selection" *ngIf="isHovered">

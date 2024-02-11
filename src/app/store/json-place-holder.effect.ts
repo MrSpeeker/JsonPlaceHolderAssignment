@@ -13,16 +13,16 @@ export class JsonPlaceHolderEffects {
     this._actions$.pipe(
       ofType(JsonActions.loadJsonPlaceHolders),
       exhaustMap(() =>
-        this._jsonPlaceHolderService
-          .getHundredRequests()
-          .pipe(
-            map((jsonItems: IJsonPlaceHolder[]) =>
-              {
-                const jsonItemsWithSelection: IJsonPlaceHolder[] = jsonItems.map(item => ({ ...item, itemType: jsonPlaceHolderEnum.Title })) ;
-                return JsonActions.loadJsonPlaceHoldersSuccess({ jsonItemsWithSelection })
-              }
-            )
-          )
+        this._jsonPlaceHolderService.getHundredRequests().pipe(
+          map((jsonItems: IJsonPlaceHolder[]) => {
+            const jsonItemsWithSelection: IJsonPlaceHolder[] = jsonItems.map(
+              (item) => ({ ...item, itemType: jsonPlaceHolderEnum.Title })
+            );
+            return JsonActions.loadJsonPlaceHoldersSuccess({
+              jsonItemsWithSelection,
+            });
+          })
+        )
       ),
       catchError((error: any) =>
         of(JsonActions.loadJsonPlaceHoldersFailure({ error: error.message }))

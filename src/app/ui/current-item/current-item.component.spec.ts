@@ -8,9 +8,7 @@ describe('CurrentItemComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CurrentItemComponent,
-      ],
+      imports: [CurrentItemComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CurrentItemComponent);
@@ -27,7 +25,9 @@ describe('CurrentItemComponent', () => {
     component.currentId = currentId;
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('span').textContent.trim()).toEqual(String(currentId));
+    expect(compiled.querySelector('span').textContent.trim()).toEqual(
+      String(currentId)
+    );
   });
 
   it('should have a default currentId value of 0', () => {
