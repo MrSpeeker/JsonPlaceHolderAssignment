@@ -102,15 +102,12 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
     
 
 4. Steps to how I would improve performance on a web-app:
-   **Example of performance issue:**
-      - Change detection on entering details in a input box.
-   - **Way of find performance issue:**
-      - Angular chrome extention, profiler.
-      - 
-
-   - **Find the problem**
-      - Most perfornance issues can be picked up using the Angular Chrome extention, the profiler.
-      - Can execute actions on you web-app and see what might be the cause of said performance issues.
+   **Steps**:
+      - Figure out which parts of your app is slow.
+      - Go to the angular chrome extension profiler.
+      - Execute actions on the places you think might be causing the performance issues.
+      - Take your finding in the profiler back to code and address said performance issues.
+   **Examples**: Can be anything from subscriptions not closed, to change detection firing to frequently.
    
 5. You’re offered a standard piece of mediocre hardware. Free to pick your own Software.
    - **Reason**
