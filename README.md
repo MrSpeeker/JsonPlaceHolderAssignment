@@ -99,7 +99,7 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
          - Nested data structures can become a pain to handle when immutable.
          
    **Achieving immutability in my own app:**
-    
+      - With currently using NGRX which enforces immutabiility by design, I already achieved it.
 
 4. Steps to how I would improve performance on a web-app:
    **Steps**:
