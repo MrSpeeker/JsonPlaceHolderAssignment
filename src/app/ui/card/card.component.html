@@ -1,25 +1,11 @@
-<mat-card class="card" (click)="itemClicked()">
-    <mat-card-content>
-        <p>
-            <ng-container *ngIf="json.itemType == 0; else userId">
-                {{json.title}}
-            </ng-container>
-        </p>
-    </mat-card-content>
+<mat-card
+  [ngClass]="changeColor ? 'select-item' : ''"
+  (click)="itemClicked()"
+>
+  <mat-card-content (mouseenter)="showText()" (mouseleave)="hideText()">
+    <mat-icon *ngIf="!isHovered"> chrome_reader_mode </mat-icon>
+    <p class="prevent-selection" *ngIf="isHovered">
+      {{ changeValue() }}
+    </p>
+  </mat-card-content>
 </mat-card>
-
-<ng-template #userId>
-    <ng-container *ngIf="json.itemType == 1; else id">
-        {{json.userId}}
-    </ng-container>
-</ng-template>
-
-<ng-template #id>
-    <ng-container *ngIf="json.itemType == 2; else body">
-        {{json.id}}
-    </ng-container>
-</ng-template>
-
-<ng-template #body>
-    {{json.body}}
-</ng-template>

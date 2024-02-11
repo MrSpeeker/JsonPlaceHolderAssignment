@@ -1,4 +1,21 @@
-.card {
-  width: 200px;
-  height: 210px;
+mat-card {
+  max-width: 150px;
+  font-family: 'Roboto';
+  background-color: #c8f5ed;
+}
+
+.select-item {
+  background-color: #80CBC4;
+}
+
+.prevent-selection {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
+}
+
+p {
+  font-size: small;
+  text-align: center;
 }

@@ -1,10 +1,14 @@
 <project-current-item [currentId]="currentId"></project-current-item>
-<mat-card style="height: 91vh; overflow-y: auto;">
-    <mat-card-content>
-        <mat-grid-list cols="10">
-            <mat-grid-tile *ngFor="let json of jsonItems">
-                <project-card [json]="json" (itemChangeEvent)="getCurrentItemId($event)"></project-card>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </mat-card-content>
+<mat-card class="grid-container">
+  <mat-card-content>
+    <mat-grid-list cols="10" rowHeight="200px">
+      <mat-grid-tile class="grid-item" *ngFor="let json of jsonItems">
+        <project-card
+          [json]="json"
+          (itemChangeEvent)="getCurrentItemId($event)"
+          [changeColor]="json.id == currentId"
+        ></project-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
 </mat-card>
