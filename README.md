@@ -117,4 +117,9 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
       - Can execute actions on you web-app and see what might be the cause of said performance issues.
    
 
-5. 
+5. You’re offered a standard piece of mediocre hardware. Free to pick your own Software.
+   - **Reason**
+      - I would like to choose my own software.
+      - Gives me the freedom to use what I want to use. 
+      - Also I am really comfortable coding on vscode, but won't mind trying other IDE's.
+      - The extension and short cut keys in vscode makes coding so much easier and faster in my case.

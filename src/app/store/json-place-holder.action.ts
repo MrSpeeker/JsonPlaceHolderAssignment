@@ -13,11 +13,7 @@ export const loadJsonPlaceHoldersFailure = createAction(
   '[Json Place Holder] Load Json Failure',
   props<{ error: string }>()
 );
-export const currentSelectedJsonItem = createAction(
+export const updateItemState = createAction(
   '[Json Place Holder] Current Selected Json Item',
   props<{ currentId: number }>()
-);
-export const previousSelectedJsonItem = createAction(
-  '[Json Place Holder] Previous Selected Json Item',
-  props<{ previousId: number }>()
 );

@@ -6,5 +6,4 @@ export class IJsonPlaceHolder {
   title = '';
   body = '';
   itemType = jsonPlaceHolderEnum.Title;
-  displayValue = '';
 }

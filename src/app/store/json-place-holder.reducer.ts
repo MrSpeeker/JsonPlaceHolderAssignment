@@ -31,15 +31,16 @@ export const jsonPlaceHolderReducer = createReducer(
     ...state,
     error,
   })),
-  on(JsonActions.currentSelectedJsonItem, (state, { currentId }) => ({
+  on(JsonActions.updateItemState, (state, { currentId }) => ({
     ...state,
     json: state.json.map((json) => ({
       ...json,
       itemType:
-        json.id === currentId ? getNextEnum(json.itemType) : jsonPlaceHolderEnum.Title,
-
+        json.id === currentId
+          ? getNextEnum(json.itemType)
+          : jsonPlaceHolderEnum.Title,
     })),
-  })),
+  }))
 );
 
 const getNextEnum = (itemType: jsonPlaceHolderEnum) => {
