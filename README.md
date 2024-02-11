@@ -22,6 +22,7 @@
     - Based on the type set in the store, a value will display according to match its type on the card.
 
 5. The current clicked item's `id` is displayed on a toolbar at the top of the page.
+6. Item details only show on hover, so that only one of the blocks details are shown at a time.
 
 ## Setup
 
