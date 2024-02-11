@@ -69,8 +69,12 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
    - Also used for generating authentication tokens and verifying api requests.
 
 2. Attack vectors available:
-   - **Phishing**: For html attachments links can be hidden in the html, and when clicking on any element that the user won't notice, it can redirect them to a Phishing website. This in turn can download malware or retrieve user credentials.
-   - **
+   - **Cross-site Scripting**: This occurs when attackers inject malicious scripts into web pages viewed by other pages.
+   - **Cross-Site Request Forgery**: Attackers trick users to click on a link on a trusted site to navigate them to a malicious website.
+
+   How to prevent said attack vectors:
+   - **Cross-site Scripting**: Santize all user supplied input on server side. Avoid using eval() and InnerHTML in code (can execute scripts of attackers).
+   - **Cross-Site Request Forgery**: Implementing proper core policies. With this you can restrict which domains can access your resources.
 
 3. A mutable object can be changed after it is created, while an immutable object cannot.
    **Example**:
@@ -96,14 +100,6 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
          
    **Achieving immutability in my own app:**
     
-   
-   **Pros and Cons of immutability:**
-      - **Pros of immutability:**
-         - 
-      - **Cons of immutability:**
-         - **Object creation overhead:** When creating a new object everytime instead of modifying exisiting ones can introduce overhead. 
-         - **Memory usage:**
-   - 
 
 4. Steps to how I would improve performance on a web-app:
    **Example of performance issue:**
@@ -116,7 +112,6 @@ Why is it (or isn't it) safe to use this? (hint: the token is one string, the pd
       - Most perfornance issues can be picked up using the Angular Chrome extention, the profiler.
       - Can execute actions on you web-app and see what might be the cause of said performance issues.
    
-
 5. You’re offered a standard piece of mediocre hardware. Free to pick your own Software.
    - **Reason**
       - I would like to choose my own software.
