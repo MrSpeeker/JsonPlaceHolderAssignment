@@ -6,6 +6,9 @@
 project-card {
     padding: 5px;
 }
+project-card:hover {
+    cursor: pointer;
+}
 
 mat-card {
     background-color: #B2DFDB;
